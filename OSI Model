@@ -1,0 +1,41 @@
+OSI Model
+Steps include in which local machine send req and receives response from server.
+
+*. DNS resolution: 
+  In this browser will check the ip address of the URL to typed in broweser, as each URL is mapped to some IP Address.
+  SO first it will check the local cache if any previos request done to this url, if no then at Internet Service provider, it will
+  find the IP address is mapped with the URL.
+
+*. TCP Handshake:
+  When request send to server, need to check if server is ready to accept your request. There are 3way Handshake ie local server 
+  will send Sync req, In response server will send Sync-Ack resp, Then local machine sends ACk req to server.
+  There are also other sync method like 2 way sync, 4 way sync.
+
+In OSI model there are 7 layers, though which req goes:
+Below 3 steps done at browser level.
+1. L7 Layer - Application Layer: 
+  In this layer browser initiates request using HTTP/HTTPS based req.
+
+2. L6 Data Encryption/Formatting - Presenatation Layer:
+  As from Initiate req to reach request to server, there are multiple stages ie req goes through diff routers, layers, so request
+  need to be ecrypt so no one can read your req.
+
+3. L5 - Session Layer:
+  It creates session to log the user logged in Session.
+
+4. L4 - Segmentation - Tranport Layer
+  At this stage, if browser sending large data or it receives large data from serrver, then data is segmented ie its divided 
+  into parts. Along with this protocol is defined ie TCP/UDP ie if we are using HTTP or HTTPS then TCP protocol is used, 
+  otehrwise UDP protocol will be used.
+
+5. L3 - Networking Layer
+  In this layer Router add Source IP Address and Destination IP address to each segment. And once we add Source IP Address 
+  and Destination IP address we call this dta as packets.
+
+6. L2 - DataLink Layer
+  Usulally routers linked with switches, so data is transformed from Packets to Frames. And in frames along with IP, it adds
+  mac. Switches only understands how data can be transferred into Frames.
+
+7. L1 - Physical Electronic signal transform
+  Finally this frames sent thru electronic signl form.
+
