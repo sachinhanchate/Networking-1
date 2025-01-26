@@ -1,0 +1,53 @@
+IP address: A unique identifier for devices on a network.
+Subnet: A smaller segment of a larger network, used for organization and management.
+CIDR: A more flexible method to specify IP address ranges and network sizes.
+
+1. IP Address (Internet Protocol Address):
+An IP address is a unique numerical label assigned to each device (like a computer, smartphone, or router) connected to a network that uses the Internet Protocol for 
+communication. This is 4 byte identification number,  divided by dot. It serves two main functions:
+
+Identification: Identifies the device on the network.
+Location Addressing: Provides information about where the device is located in the network.
+There are two types of IP addresses:
+
+IPv4: This is the older, more commonly used format. It consists of four sets of numbers (each ranging from 0 to 255) separated by dots, like this: 192.168.1.1.
+IPv6: This is the newer format, designed to accommodate the growing number of devices connected to the internet. It uses 128-bit addresses, written in eight groups of four hexadecimal numbers separated by colons, like this: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+2. Subnet (Subnetwork):
+A subnet is a smaller, logical division of a larger network (the IP network). Instead of using a single large network for all devices, we break it down into smaller groups for better management, security, and performance. Devices in the same subnet can communicate directly with each other, while communication between different subnets often requires a router.
+For eg. if a company has large network, so each & every employee of that company can connect to the comapny network, so in case if any employee connected to any malicious 
+site, then it there could be a chance that, a hacker can hack any machine connected to that company network. So it might hack important company data.
+
+So to avoid this situation, there is technique SUBNET, using we can create a logical Subnetworking, so other machines connected to company network can not connect to machines
+in different subnet.
+
+For example, if you have a large company network with the IP range 192.168.0.0/24, you might create smaller subnets like 192.168.1.0/25 and 192.168.2.0/25 to separate different departments or regions.
+
+Adv of subnet:
+Security
+Privacy
+Isolation
+
+Subnet can be Private & Public:
+Public SUbnet: Can have access to internet
+Private Subnet: Cannot have access to internet
+
+SO whenever you create a Subnet, you will ask to add CIDR range.
+
+3. CIDR (Classless Inter-Domain Routing):
+CIDR is a method used to allocate and specify IP addresses and subnet masks in a more flexible way than the traditional class-based system. Instead of using a fixed size for the network portion of the address (like Class A, B, or C), CIDR allows you to specify the exact number of bits that make up the network part of the IP address.
+
+CIDR notation combines the IP address with a suffix (a slash followed by a number), indicating how many bits are used for the network. For example:
+
+192.168.1.0/24: This means the first 24 bits of the IP address are used for the network, and the remaining 8 bits are for hosts. This is equivalent to the older 255.255.255.0 subnet mask.
+
+SO in above case = 32-24 = 8 => 2 power 8 = 256
+ 
+ 2. If you want 32 IP address then, 32-27 = 5 => 2 power 5 = 32 
+  SO CIDR will be 192.168.1.0/27
+
+The CIDR format allows for more efficient use of IP address spaces, enabling networks of varying sizes to be allocated without the rigid structure of classes.
+
+4. PORTS:
+  Ports are unique number to particular application hosted within a VM.
+For eg: if a VM can have number of Applications, so each application can be identified by a number along with a ip address like 192.168.10.1| 8080 
